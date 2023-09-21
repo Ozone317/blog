@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/post_details.css" %}">
+{% endblock %}
+
+{% block title%}
+    This post
+{%endblock%}
+
+{% block content %}
+    <section id="summary">
+        <h2>Post title</h2>
+        <article>
+            <img src="{% static "blog/images/mountains.jpg" %}" alt="Post title"/>
+            <address>By Daksh</address>
+            <div>
+                Last updated on <time>July 15th</time>
+            </div>
+        </article>
+    </section>
+
+    <main>
+        <p>
+            {% lorem 1 b random %}
+            {% lorem 1 b random %}
+            {% lorem 1 b random %}
+        </p>
+    </main>
+{% endblock %}
