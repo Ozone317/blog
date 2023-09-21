@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/post.css" %}">
+    <link rel="stylesheet" href="{% static "blog/all_posts.css" %}">
+{% endblock %}
+
+{% block title%} All posts {%endblock%}
+
+{% block content %}
+    <section id="all-posts">
+        <h2>All posts</h2>
+        <ul>
+            {% include "blog/includes/post.html" %}
+            {% include "blog/includes/post.html" %}
+            {% include "blog/includes/post.html" %}
+            {% include "blog/includes/post.html" %}
+            {% include "blog/includes/post.html" %}
+            {% include "blog/includes/post.html" %}
+        </ul>
+    </section>
+{% endblock %}
