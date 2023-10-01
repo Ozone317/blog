@@ -29,6 +29,9 @@ class Post(models.Model):
     slug = models.SlugField(unique=True, db_index=True)
     tags = models.ManyToManyField(Tag)
 
+    def __str__(self):
+        return f"{self.title}"
+
 class Comment(models.Model):
     user_name = models.CharField(max_length=120)
     user_email = models.EmailField()
